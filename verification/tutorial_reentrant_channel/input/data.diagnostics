@@ -22,7 +22,7 @@
  diagMdsDir = 'Diags'
 
 # 2D diagnostics
- fields(1:3,1) = 'TRELAX  ','MXLDEPTH', 'ETAN    ',
+ fields(1:2,1) = 'TRELAX  ', 'ETAN',
  frequency(1) = 31104000.,
  filename(1) = '2D_diags',
 
@@ -44,12 +44,17 @@
  frequency(4) = 31104000.,
  fileName(4) = 'layDiag',
 
+# Mixed layer parameters
+ fields(1:2,7)  = 'MXLDEPTH','KPPhbl',
+ fileName(7) = 'DiagMXL_2d',
+ frequency(7) = 43200.,
+
 # GM diagnostics
 #- Note: comment out this diagnostics list below if useGMRedi=.FALSE.
 #        or you will get warnings messages in STDERR
- fields(1:2,5) = 'GM_PsiX ', 'GM_PsiY ',
- frequency(5) = 31104000.,
- filename(5) = 'GM_diags',
+# fields(1:2,5) = 'GM_PsiX ', 'GM_PsiY ',
+# frequency(5) = 31104000.,
+# filename(5) = 'GM_diags',
 
 #---------------------------------------
 #- Eddy-permitting run, diagnose vorticity (not computed when using uniform Ah)
