@@ -1,3 +1,7 @@
+# MITgcm large binary inputs
+**/input/*.bin
+**/*.bin
+
 # CVS default ignores begin
 *~
 \#*
